@@ -69,3 +69,24 @@ function options() {
                 }
         })
 };
+
+// view all employees in the database
+function viewEmployees() {
+    var query = 'SELECT * FROM employee';
+    connection.query(query, function(err, res) {
+        if (err) throw err;
+        console.log(res.length + ' employees found!');
+        console.table('All Employees:', res); 
+        options();
+    })
+};
+
+// view all departments in the database
+function viewDepartments() {
+    var query = 'SELECT * FROM department';
+    connection.query(query, function(err, res) {
+        if(err)throw err;
+        console.table('All Departments:', res);
+        options();
+    })
+};
