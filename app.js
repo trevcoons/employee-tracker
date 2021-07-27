@@ -236,3 +236,18 @@ function addRole() {
         })
     })
 };
+
+// update a role in the database
+function updateRole() {
+
+};
+
+//  delete an employee
+function deleteEmployee() {
+
+};
+
+// exit the app
+function exitApp() {
+    connection.end();
+};
